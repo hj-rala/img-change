@@ -1,0 +1,26 @@
+
+
+
+
+
+<a href="/" class="mImg"><img src="../images/img/img_logo_m_1.jpg" alt="" class="ch0" /><img src="../images/img/img_logo_m_2.jpg" alt="" /></a>
+
+
+
+
+
+
+
+
+//mlogo
+	var logoImg = $('.ch0');
+	var moveicon = function(a){
+		var target = a;
+		a.animate({'opacity' : '1'}, 600);
+		a.delay(3000).animate({'opacity' : '0'}, 600, function() { 
+			setTimeout( function(){
+				moveicon(target); 
+			}, 3000);
+		});
+	}
+	moveicon(logoImg); 
